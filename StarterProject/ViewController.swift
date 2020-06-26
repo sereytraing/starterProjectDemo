@@ -12,14 +12,6 @@ class ViewController: UIViewController {
   
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        view.backgroundColor = .yellow
-        
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        if let controller = storyboard.instantiateViewController(identifier: "MovieViewController") as? MovieViewController {
-            self.navigationController?.pushViewController(controller, animated: true)
-        }
-        
     }
 }
 

@@ -14,7 +14,7 @@ protocol MovieViewControllerDelegate: class {
 
 class MovieViewModel {
     
-    let domain: MovieDomain
+    private let domain: MovieDomain
     var movie: Movie? = nil
     weak var delegate: MovieViewControllerDelegate?
     
@@ -28,13 +28,17 @@ class MovieViewModel {
             forceRefresh: true,
             completionSuccess: { [weak self] movies in
                 guard let self = self else { return }
-                if let movie = movies.first {
-                    self.movie = movie
-                    self.delegate?.setAllText(title: movie.title ?? "", overview: movie.overview ?? "")
-                }
+                self.manageMovie(movie: movies.first)
         },
             completionError: { e in
             print(e)
         })
+    }
+    
+    private func manageMovie(movie: Movie?) {
+        if let movie = movie {
+            self.movie = movie
+            self.delegate?.setAllText(title: movie.title ?? "", overview: movie.overview ?? "")
+        }
     }
 }

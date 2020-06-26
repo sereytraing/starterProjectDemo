@@ -184,9 +184,9 @@
 		0FBE9368248CFDF900BDB67D /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				0F491F9524A6720100A46516 /* Repository */,
 				0FBE9381248D137500BDB67D /* Model */,
 				0FBE9369248CFE0700BDB67D /* Network */,
+				0F491F9524A6720100A46516 /* Repository */,
 				0F491F9324A671E000A46516 /* Domain */,
 			);
 			path = Data;
