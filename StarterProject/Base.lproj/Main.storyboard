@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0ZT-7Q-YmO">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -21,6 +21,49 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="132" y="88"/>
+        </scene>
+        <!--Movie View Controller-->
+        <scene sceneID="Dvt-mo-sx3">
+            <objects>
+                <viewController storyboardIdentifier="MovieViewController" id="0ZT-7Q-YmO" customClass="MovieViewController" customModule="StarterProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="c2t-Yo-fCT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rSZ-cw-bkC">
+                                <rect key="frame" x="20" y="54" width="65" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="WP3-mm-aJV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hi5-9f-dMG">
+                                <rect key="frame" x="20" y="184" width="374" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Hi5-9f-dMG" firstAttribute="leading" secondItem="Fn6-GZ-zi7" secondAttribute="leading" constant="20" id="9bi-wa-xk6"/>
+                            <constraint firstItem="Fn6-GZ-zi7" firstAttribute="trailing" secondItem="Hi5-9f-dMG" secondAttribute="trailing" constant="20" id="KMg-04-DDG"/>
+                            <constraint firstItem="rSZ-cw-bkC" firstAttribute="top" secondItem="Fn6-GZ-zi7" secondAttribute="top" constant="10" id="KVM-3d-wyc"/>
+                            <constraint firstItem="rSZ-cw-bkC" firstAttribute="leading" secondItem="Fn6-GZ-zi7" secondAttribute="leading" constant="20" id="RMl-Tx-clS"/>
+                            <constraint firstItem="Hi5-9f-dMG" firstAttribute="top" secondItem="rSZ-cw-bkC" secondAttribute="bottom" constant="30" id="xiu-Xd-M8A"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Fn6-GZ-zi7"/>
+                    </view>
+                    <connections>
+                        <outlet property="overviewLabel" destination="Hi5-9f-dMG" id="X8o-Bv-JAr"/>
+                        <outlet property="titleLabel" destination="rSZ-cw-bkC" id="bnD-Df-l6p"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hdw-Q1-fuc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="978" y="82"/>
         </scene>
     </scenes>
 </document>

@@ -58,7 +58,7 @@ extension MovieApi: EndPointType {
         case .newMovies(let page):
             return .requestParameters(bodyParameters: nil, urlParameters:
                 ["page": page,
-                 "api_key": NetworkManager.movieAPIKey
+                 "api_key": MovieNetwork.movieAPIKey
                 ])
         default:
             return .request

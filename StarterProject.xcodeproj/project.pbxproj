@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F491F9024A6718A00A46516 /* MovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F491F8F24A6718A00A46516 /* MovieViewController.swift */; };
+		0F491F9224A6719900A46516 /* MovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F491F9124A6719900A46516 /* MovieViewModel.swift */; };
+		0F491F9924A6729200A46516 /* MovieRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F491F9824A6729200A46516 /* MovieRepository.swift */; };
+		0F491F9B24A6729E00A46516 /* MovieDomain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F491F9A24A6729E00A46516 /* MovieDomain.swift */; };
+		0F491F9E24A6744B00A46516 /* MovieNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F491F9D24A6744B00A46516 /* MovieNetwork.swift */; };
+		0F491FA124A6760500A46516 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F491FA024A6760500A46516 /* BaseViewController.swift */; };
+		0F491FA324A67A1B00A46516 /* DomainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F491FA224A67A1B00A46516 /* DomainManager.swift */; };
 		0FBE9355248CFDD200BDB67D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBE9354248CFDD200BDB67D /* AppDelegate.swift */; };
 		0FBE9357248CFDD200BDB67D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBE9356248CFDD200BDB67D /* SceneDelegate.swift */; };
 		0FBE9359248CFDD200BDB67D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBE9358248CFDD200BDB67D /* ViewController.swift */; };
@@ -29,6 +36,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F491F8F24A6718A00A46516 /* MovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewController.swift; sourceTree = "<group>"; };
+		0F491F9124A6719900A46516 /* MovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewModel.swift; sourceTree = "<group>"; };
+		0F491F9824A6729200A46516 /* MovieRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRepository.swift; sourceTree = "<group>"; };
+		0F491F9A24A6729E00A46516 /* MovieDomain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDomain.swift; sourceTree = "<group>"; };
+		0F491F9D24A6744B00A46516 /* MovieNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieNetwork.swift; sourceTree = "<group>"; };
+		0F491FA024A6760500A46516 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		0F491FA224A67A1B00A46516 /* DomainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainManager.swift; sourceTree = "<group>"; };
 		0FBE9351248CFDD200BDB67D /* StarterProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarterProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FBE9354248CFDD200BDB67D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0FBE9356248CFDD200BDB67D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +80,73 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F491F8D24A670F800A46516 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				0F491F9F24A675F800A46516 /* Common */,
+				0F491F8E24A6713700A46516 /* Demo */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		0F491F8E24A6713700A46516 /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				0F491F8F24A6718A00A46516 /* MovieViewController.swift */,
+				0F491F9124A6719900A46516 /* MovieViewModel.swift */,
+			);
+			path = Demo;
+			sourceTree = "<group>";
+		};
+		0F491F9324A671E000A46516 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				0F491F9724A6723900A46516 /* Demo */,
+				0F491FA224A67A1B00A46516 /* DomainManager.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		0F491F9524A6720100A46516 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				0F491F9624A6723400A46516 /* Demo */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		0F491F9624A6723400A46516 /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				0F491F9824A6729200A46516 /* MovieRepository.swift */,
+			);
+			path = Demo;
+			sourceTree = "<group>";
+		};
+		0F491F9724A6723900A46516 /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				0F491F9A24A6729E00A46516 /* MovieDomain.swift */,
+			);
+			path = Demo;
+			sourceTree = "<group>";
+		};
+		0F491F9C24A6743A00A46516 /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				0F491F9D24A6744B00A46516 /* MovieNetwork.swift */,
+			);
+			path = Demo;
+			sourceTree = "<group>";
+		};
+		0F491F9F24A675F800A46516 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				0F491FA024A6760500A46516 /* BaseViewController.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		0FBE9348248CFDD200BDB67D = {
 			isa = PBXGroup;
 			children = (
@@ -88,9 +169,10 @@
 			isa = PBXGroup;
 			children = (
 				0FBE9368248CFDF900BDB67D /* Data */,
+				0F491F8D24A670F800A46516 /* App */,
 				0FBE9354248CFDD200BDB67D /* AppDelegate.swift */,
-				0FBE9356248CFDD200BDB67D /* SceneDelegate.swift */,
 				0FBE9358248CFDD200BDB67D /* ViewController.swift */,
+				0FBE9356248CFDD200BDB67D /* SceneDelegate.swift */,
 				0FBE935A248CFDD200BDB67D /* Main.storyboard */,
 				0FBE935D248CFDD400BDB67D /* Assets.xcassets */,
 				0FBE935F248CFDD400BDB67D /* LaunchScreen.storyboard */,
@@ -102,8 +184,10 @@
 		0FBE9368248CFDF900BDB67D /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				0F491F9524A6720100A46516 /* Repository */,
 				0FBE9381248D137500BDB67D /* Model */,
 				0FBE9369248CFE0700BDB67D /* Network */,
+				0F491F9324A671E000A46516 /* Domain */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -146,6 +230,7 @@
 			isa = PBXGroup;
 			children = (
 				0FBE9385248D13DB00BDB67D /* NetworkManager.swift */,
+				0F491F9C24A6743A00A46516 /* Demo */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -196,7 +281,6 @@
 				E47AFAF46AF0B31392120E25 /* Pods-StarterProject.debug.xcconfig */,
 				350FDF21766E46D1E8E5C25E /* Pods-StarterProject.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -299,7 +383,10 @@
 			files = (
 				0FBE9388248D197100BDB67D /* NetworkLogger.swift in Sources */,
 				0FBE9377248D026800BDB67D /* URLParameterEncoder.swift in Sources */,
+				0F491F9924A6729200A46516 /* MovieRepository.swift in Sources */,
 				0FBE9375248D00C100BDB67D /* ParameterEncoding.swift in Sources */,
+				0F491F9024A6718A00A46516 /* MovieViewController.swift in Sources */,
+				0F491FA124A6760500A46516 /* BaseViewController.swift in Sources */,
 				0FBE937D248D0C0E00BDB67D /* Router.swift in Sources */,
 				0FBE9373248CFFFD00BDB67D /* HTTPTask.swift in Sources */,
 				0FBE936F248CFEB900BDB67D /* EndPointType.swift in Sources */,
@@ -307,10 +394,14 @@
 				0FBE9384248D138700BDB67D /* MovieModel.swift in Sources */,
 				0FBE9379248D04F600BDB67D /* JSONParameterEncoder.swift in Sources */,
 				0FBE9355248CFDD200BDB67D /* AppDelegate.swift in Sources */,
+				0F491FA324A67A1B00A46516 /* DomainManager.swift in Sources */,
 				0FBE937B248D05D000BDB67D /* NetworkRouter.swift in Sources */,
+				0F491F9B24A6729E00A46516 /* MovieDomain.swift in Sources */,
 				0FBE9386248D13DB00BDB67D /* NetworkManager.swift in Sources */,
+				0F491F9E24A6744B00A46516 /* MovieNetwork.swift in Sources */,
 				0FBE9371248CFF9900BDB67D /* HTTPMethod.swift in Sources */,
 				0FBE9357248CFDD200BDB67D /* SceneDelegate.swift in Sources */,
+				0F491F9224A6719900A46516 /* MovieViewModel.swift in Sources */,
 				0FBE9380248D130600BDB67D /* MovieEndPoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
