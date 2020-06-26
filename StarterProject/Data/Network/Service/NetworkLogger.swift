@@ -11,8 +11,8 @@ import Foundation
 class NetworkLogger {
     static func log(request: URLRequest) {
         
-        print("\n - - - - - - - - - - OUTGOING - - - - - - - - - - \n")
-        defer { print("\n - - - - - - - - - -  END - - - - - - - - - - \n") }
+        print("\n ✉️ ✉️ ✉️ OUTGOING ✉️ ✉️ ✉️ \n")
+        defer { print("\n - - - END - - - \n") }
         
         let urlAsString = request.url?.absoluteString ?? ""
         let urlComponents = NSURLComponents(string: urlAsString)
@@ -38,9 +38,17 @@ class NetworkLogger {
     }
     
     static func log(response: URLResponse?) {
-        print("\n - - - - - - - - - - RESPONSE - - - - - - - - - - \n")
-        defer { print("\n - - - - - - - - - -  END - - - - - - - - - - \n") }
-        
-        print(response)
+        print("\n - - - RESPONSE - - - \n")
+        defer { print("\n - - - END - - - \n") }
+        if let url = response?.url {
+            print("➡️ Service URL: \(url)")
+        }
+        if let httpResponse = response as? HTTPURLResponse {
+            if httpResponse.statusCode == 200 {
+                print("➡️ Status Code: \(httpResponse.statusCode) ✅")
+            } else {
+                print("➡️ Status Code: \(httpResponse.statusCode) ❌")
+            }
+        }
     }
 }

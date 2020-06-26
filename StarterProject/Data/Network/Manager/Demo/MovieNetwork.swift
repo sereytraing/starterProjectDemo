@@ -31,9 +31,6 @@ class MovieNetwork: NetworkManager {
                         return
                     }
                     do {
-                        print(responseData)
-                        let jsonData = try JSONSerialization.jsonObject(with: responseData, options: .mutableContainers)
-                        print(jsonData)
                         let apiResponse = try JSONDecoder().decode(MovieApiResponse.self, from: responseData)
                         completion(apiResponse.movies,nil)
                     } catch {
